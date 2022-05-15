@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/nav_smartbook"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Mes SmartBooks" />
+        <item
+            android:id="@+id/nav_scannedsmartbook"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Mes SmartBooks Scanner" />
+        <item
+            android:id="@+id/nav_addsmartbook"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Ajouter un SmartBook" />
+        <item
+            android:id="@+id/nav_scansmartbook"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Scanner SmartBook" />
+    </group>
+</menu>
