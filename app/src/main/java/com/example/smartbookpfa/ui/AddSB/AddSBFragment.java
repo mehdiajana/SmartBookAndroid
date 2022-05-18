@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.example.smartbookpfa.R;
-
+//Pour Ajouter un smart book dans l'application
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link AddSBFragment#newInstance} factory method to
