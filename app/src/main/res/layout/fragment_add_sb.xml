@@ -30,7 +30,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/titre"
+                android:id="@+id/titresb"
                 android:layout_width="350dp"
                 android:layout_height="45dp"
                 android:layout_marginTop="20dp"

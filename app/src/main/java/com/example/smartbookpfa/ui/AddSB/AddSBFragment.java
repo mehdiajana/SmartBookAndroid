@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.example.smartbookpfa.R;
 
@@ -25,6 +26,9 @@ public class AddSBFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+   // tit = (EditText) findViewById(R.id.titresb);
+
+    private EditText tit;
 
     public AddSBFragment() {
         // Required empty public constructor
@@ -44,6 +48,7 @@ public class AddSBFragment extends Fragment {
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -55,12 +60,15 @@ public class AddSBFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_sb, container, false);
+        View view = inflater.inflate(R.layout.fragment_add_sb, container,false);
+        tit = (EditText) getView().findViewById(R.id.titresb);
+        return view;
     }
 }
