@@ -25,11 +25,11 @@
             android:letterSpacing="0.03"/>
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/username"
             android:layout_width="350dp"
             android:layout_height="45dp"
             android:background="@drawable/forget"
-            android:text="Email"
+            android:hint="Username"
             android:textColor="#0d6e6a"
             android:textStyle="bold"
 
@@ -42,7 +42,7 @@
             android:layout_width="350dp"
             android:layout_height="45dp"
             android:background="@drawable/forget"
-            android:text="Password"
+            android:hint="Password"
             android:textColor="#0d6e6a"
             android:textStyle="bold"
             android:textSize="18dp"
