@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+// Splash screeen 
 public class MainActivity extends AppCompatActivity {
     Button login;
     Button register;
@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                Intent intent ;
+                  intent =  new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
