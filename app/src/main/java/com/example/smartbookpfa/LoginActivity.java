@@ -1,14 +1,12 @@
 package com.example.smartbookpfa;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -19,10 +17,8 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
@@ -35,7 +31,8 @@ public class LoginActivity extends AppCompatActivity {
     String identifier;
     String username;
     RequestQueue requestQueue;
-    String showUrl = "http://127.0.0.2:8080/api/login";
+    String showUrl ;
+    showUrl = "http://127.0.0.2:8080/api/login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +44,6 @@ public class LoginActivity extends AppCompatActivity {
         //password= findViewById(R.id.password).toString();
         user = (EditText) findViewById(R.id.username);
         pass = (EditText) findViewById(R.id.password);
-
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,7 +79,6 @@ public class LoginActivity extends AppCompatActivity {
                         Map<String, String> params = new HashMap<>();
                         params.put("username", username);
                         params.put("password", password);
-
                         return params;
                     }
 
