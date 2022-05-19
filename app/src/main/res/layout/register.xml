@@ -88,17 +88,6 @@
             android:textSize="18dp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/ddn"
-            android:layout_width="350dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/forget"
-            android:hint="Date de Naissance"
-            android:paddingLeft="20dp"
-            android:textColor="#0d6e6a"
-            android:textSize="18dp"
-            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn"

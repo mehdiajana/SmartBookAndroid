@@ -44,11 +44,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
-    EditText first,last,em,pass,user,ddn;
-    String nom,prenom,email,password,username,daten;
+    EditText first,last,em,pass,user;
+    String nom,prenom,email,password,username;
     Button b;
     RequestQueue requestQueue;
-    String insertUrl = "";
+    String insertUrl = "http://127.0.0.2:8080/api/user/save";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +59,6 @@ public class RegisterActivity extends AppCompatActivity {
         em = (EditText) findViewById(R.id.email);
         pass = (EditText) findViewById(R.id.password);
         user = (EditText) findViewById(R.id.username);
-        ddn = (EditText) findViewById(R.id.ddn);
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,10 +66,10 @@ public class RegisterActivity extends AppCompatActivity {
 
                 try{
                     GetData();
-                    if(nom!="" && prenom!="" && email!="" && password!=""&& username!=""&& daten!="")
+                    if(nom!="" && prenom!="" && email!="" && password!=""&& username!="")
                     {
                         Toast.makeText(getApplicationContext(),"Loading... ",Toast.LENGTH_LONG).show();
-                        InsertData(nom, prenom,username, email,password, daten);
+                        InsertData(nom, prenom,username, email,password);
                     }else
                     {
                         Toast.makeText(getApplicationContext(),"Please fill the whole information",Toast.LENGTH_LONG).show();
@@ -95,10 +94,9 @@ public class RegisterActivity extends AppCompatActivity {
         email = em.getText().toString();
         password = pass.getText().toString();
         username = user.getText().toString();
-        daten = ddn.getText().toString();
     }
 
-    public void InsertData(final String nom,final String prenom ,final String username,final String email, final String password, final String daten){
+    public void InsertData(final String nom,final String prenom ,final String username,final String email, final String password){
 
         class SendPostReqAsyncTask extends AsyncTask<String, Void, String> {
             @Override
@@ -109,7 +107,6 @@ public class RegisterActivity extends AppCompatActivity {
                 String EmailHolder = email ;
                 String passwordHolder = password ;
                 String usernameHolder = username;
-                String datenHolder = daten;
 
 
                 List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
@@ -119,7 +116,6 @@ public class RegisterActivity extends AppCompatActivity {
                 nameValuePairs.add(new BasicNameValuePair("email", EmailHolder));
                 nameValuePairs.add(new BasicNameValuePair("password", passwordHolder));
                 nameValuePairs.add(new BasicNameValuePair("username", usernameHolder));
-                nameValuePairs.add(new BasicNameValuePair("daten", datenHolder));
 
                 try {
                     HttpClient httpClient = new DefaultHttpClient();
@@ -153,7 +149,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         SendPostReqAsyncTask sendPostReqAsyncTask = new SendPostReqAsyncTask();
 
-        sendPostReqAsyncTask.execute(nom, prenom,username, email,password, daten);
+        sendPostReqAsyncTask.execute(nom, prenom,username, email,password);
     }
 
 

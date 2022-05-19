@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     String identifier;
     String username;
     RequestQueue requestQueue;
-    String showUrl = "http://172.20.10.5:8080/api/login";
+    String showUrl = "http://127.0.0.2:8080/api/login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
